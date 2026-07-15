@@ -2061,6 +2061,162 @@ td .star {
     }
 }
 
+/* Guide stories and reader voices use the same readable scale */
+.stories .section-heading h2 { font-size: 40px }
+.stories .section-heading .text-button { font-size: 14px }
+.story-meta { font-size: 14px !important; letter-spacing: 1px }
+.story-meta span { font-size: 13px !important }
+.story-card h3 { font-size: 18px !important; line-height: 1.4 }
+.story-card p { font-size: 14px !important; line-height: 1.6 }
+.quote-stars { font-size: 14px }
+.voice-grid blockquote p { font-size: 16px; line-height: 1.55 }
+.voice-grid footer { font-size: 13px }
+.voice-grid footer span { font-size: 13px }
+@media (max-width: 800px) {
+    .stories .section-heading h2 { font-size: 32px }
+    .story-meta { font-size: 13px !important }
+    .story-card h3 { font-size: 17px !important }
+    .story-card p { font-size: 13px !important }
+    .voice-grid blockquote p { font-size: 14px }
+}
+
+/* Accessibility floor: no supporting text smaller than 13px */
+.eyebrow,
+.pill,
+.rank,
+.feature-row,
+.vpn-score span,
+.vpn-price small,
+.small-link,
+.center-link a,
+.ticker-inner,
+.stats-grid span,
+.method-number,
+.story-meta,
+.feature-notes,
+.feature-intro small,
+.footer h4,
+.footer p,
+.footer-grid a:not(.logo),
+.footer-bottom,
+.newsletter input,
+.deal-kicker,
+.plan-info small,
+.plan-info em,
+.popular-label,
+.plan-price small,
+.deal-footnote,
+.plan-choose,
+.deal-intro { font-size: 13px !important }
+.trust-line,
+.method-card p,
+.faq-list p,
+.newsletter-copy,
+.deal-menu-head,
+.table-mark,
+.provider-logo,
+.mini-flag,
+.avatar-stack i { font-size: 13px !important }
+.feature-table th,
+.feature-table td,
+.feature-table th b { font-size: 13px !important }
+.stats-grid strong span { font-size: 13px !important }
+.comparison .section-heading h2,
+.guides .section-heading h2 { font-size: 40px }
+.comparison .section-heading>p,
+.guides .section-heading>p { font-size: 16px }
+.comparison th { font-size: 13px !important; letter-spacing: .8px }
+.comparison td { font-size: 14px !important; line-height: 1.5 }
+.comparison td:first-child { font-size: 14px !important }
+.guide-card h3 { font-size: 20px }
+.guide-card p { font-size: 14px; line-height: 1.6 }
+.guide-card .guide-icon { font-size: 32px }
+@media (max-width: 800px) {
+    .comparison .section-heading h2,
+    .guides .section-heading h2 { font-size: 32px }
+    .comparison .section-heading>p,
+    .guides .section-heading>p { font-size: 14px }
+    .comparison td { font-size: 13px !important }
+    .guide-card h3 { font-size: 19px }
+    .guide-card p { font-size: 13px }
+}
+
+/* Final section hierarchy: same heading/body/table rhythm everywhere */
+.section-heading h2,
+.editorial-copy h2,
+.why-intro h2,
+.faq h2,
+.feature-intro h2,
+.final-cta h2 { font-size: 36px; line-height: 1.16 }
+.section-heading>p,
+.editorial-copy>p,
+.why-intro p,
+.faq-grid>div>p,
+.feature-intro p { font-size: 15px; line-height: 1.6 }
+.method-card h3,
+.guide-card h3,
+.story-card h3 { font-size: 17px }
+.method-card p,
+.guide-card p,
+.story-card p { font-size: 13px; line-height: 1.55 }
+.feature-table th,
+.feature-table td { font-size: 13px; line-height: 1.4 }
+.feature-table th b { font-size: 13px }
+.feature-notes { font-size: 12px }
+.feature-intro small { font-size: 10px }
+@media (max-width: 800px) {
+    .section-heading h2,
+    .editorial-copy h2,
+    .why-intro h2,
+    .faq h2,
+    .feature-intro h2,
+    .final-cta h2 { font-size: 31px }
+    .feature-table th,
+    .feature-table td { font-size: 12px }
+}
+
+/* Unified readable type scale across the whole page */
+body { font-size: 16px }
+.eyebrow { font-size: 12px }
+.hero-lede { font-size: 18px }
+.trust-line { font-size: 12px }
+.trust-line b { font-size: 13px }
+.nav-links { font-size: 14px }
+.ticker-inner { font-size: 12px }
+.stats-grid strong { font-size: 27px }
+.stats-grid span { font-size: 11px }
+.rank { font-size: 14px }
+.vpn-main h3 { font-size: 17px }
+.vpn-main p { font-size: 14px }
+.feature-row { font-size: 12px }
+.pill { font-size: 10px }
+.vpn-score strong { font-size: 25px }
+.vpn-score span, .vpn-price small { font-size: 12px }
+.vpn-price strong { font-size: 17px }
+.small-link, .center-link a { font-size: 12px }
+.section-heading>p, .why-intro p, .faq-grid>div>p { font-size: 15px }
+.method-card h3 { font-size: 15px }
+.method-card p { font-size: 12px }
+.guide-card h3 { font-size: 19px }
+.guide-card p { font-size: 12px }
+.story-meta { font-size: 10px }
+.story-card h3 { font-size: 16px }
+.story-card p { font-size: 12px }
+.faq-list summary { font-size: 15px }
+.faq-list p { font-size: 13px }
+.footer p, .footer-grid a:not(.logo) { font-size: 12px }
+.feature-intro p { font-size: 14px }
+.feature-table th, .feature-table td { font-size: 12px }
+.feature-table th b { font-size: 12px }
+.feature-notes { font-size: 11px }
+@media (max-width: 800px) {
+    .hero-lede { font-size: 16px }
+    .section-heading>p, .why-intro p, .faq-grid>div>p { font-size: 14px }
+    .vpn-main h3 { font-size: 16px }
+    .vpn-main p { font-size: 13px }
+    .feature-row { font-size: 11px }
+}
+
 /* Keep stat units attached to their values: 812k and 4.9/5 */
 .stats-grid strong span {
     display: inline;
@@ -2070,6 +2226,26 @@ td .star {
 }
 .stats-grid>div {
     min-width: 0;
+}
+
+/* Slightly larger desktop type scale for better readability */
+body { font-size: 16px }
+.nav-links { font-size: 14px }
+.ticker-inner { font-size: 12px }
+.stats-grid span { font-size: 11px }
+.section-heading h2, .why-intro h2, .faq h2 { font-size: 39px }
+.section-heading>p, .why-intro p, .faq-grid>div>p { font-size: 14px }
+.vpn-main h3 { font-size: 16px }
+.vpn-main p { font-size: 13px }
+.feature-row { font-size: 11px }
+.vpn-score strong { font-size: 24px }
+.vpn-score span, .vpn-price small { font-size: 11px }
+.vpn-price strong { font-size: 16px }
+.small-link, .center-link a { font-size: 11px }
+@media (max-width: 800px) {
+    body { font-size: 15px }
+    .section-heading h2, .why-intro h2, .faq h2 { font-size: 31px }
+    .vpn-main h3 { font-size: 15px }
 }
 
 .deal-overlay {
@@ -2264,3 +2440,90 @@ td .star {
         line-height: 1.2;
     }
 }
+
+/* Larger guide cards for the key discovery section */
+.guides .eyebrow { font-size: 14px !important }
+.guides .section-heading h2 { font-size: 44px !important; line-height: 1.15 }
+.guides .section-heading>p { font-size: 17px !important }
+.guides .guide-card h3 { font-size: 22px !important; line-height: 1.3 }
+.guides .guide-card p { font-size: 16px !important; line-height: 1.55 }
+.guides .guide-card .guide-icon { font-size: 36px !important }
+.guides .guide-card { min-height: 225px }
+@media (max-width: 800px) {
+    .guides .section-heading h2 { font-size: 34px !important }
+    .guides .section-heading>p { font-size: 15px !important }
+    .guides .guide-card h3 { font-size: 20px !important }
+    .guides .guide-card p { font-size: 14px !important }
+}
+
+/* Final typography contract: one consistent scale across every section */
+body { font-size: 16px !important; line-height: 1.55 }
+h1, h2, h3, p { margin-top: 0 }
+.hero h1 { font-size: 60px !important; line-height: 1.12 !important; letter-spacing: -1.5px !important }
+.section-heading h2,
+.editorial-copy h2,
+.why-intro h2,
+.faq h2,
+.feature-intro h2,
+.stories .section-heading h2,
+.final-cta h2,
+.guides .section-heading h2 { font-size: 40px !important; line-height: 1.16 !important; letter-spacing: -1.1px !important; word-spacing: 1px }
+.eyebrow { font-size: 13px !important; line-height: 1.3 }
+.hero-lede { font-size: 18px !important; line-height: 1.6 }
+.section-heading>p,
+.editorial-copy>p,
+.why-intro>p,
+.faq-grid>div>p,
+.feature-intro p,
+.guides .section-heading>p { font-size: 15px !important; line-height: 1.6 }
+.vpn-main h3 { font-size: 17px !important; line-height: 1.35 }
+.vpn-main p { font-size: 14px !important; line-height: 1.45 }
+.feature-row { font-size: 13px !important; line-height: 1.35 }
+.method-card h3,
+.guide-card h3 { font-size: 19px !important; line-height: 1.35 }
+.method-card p,
+.guide-card p { font-size: 14px !important; line-height: 1.55 }
+.story-card h3 { font-size: 18px !important; line-height: 1.4 }
+.story-card p { font-size: 14px !important; line-height: 1.55 }
+.story-meta { font-size: 13px !important; line-height: 1.4 }
+.story-meta span { font-size: 13px !important }
+.voice-grid blockquote p { font-size: 16px !important; line-height: 1.55 }
+.voice-grid footer, .voice-grid footer span { font-size: 13px !important }
+.faq-list summary { font-size: 15px !important; line-height: 1.4 }
+.faq-list p { font-size: 14px !important; line-height: 1.55 }
+.comparison th { font-size: 13px !important }
+.comparison td { font-size: 14px !important; line-height: 1.5 }
+.feature-table th, .feature-table th b { font-size: 13px !important }
+.feature-table td { font-size: 14px !important; line-height: 1.45 }
+.feature-notes { font-size: 13px !important }
+.stats-grid strong { font-size: 27px !important }
+.stats-grid span { font-size: 13px !important }
+.rank { font-size: 14px !important }
+.vpn-score strong { font-size: 25px !important }
+.vpn-score span, .vpn-price small, .small-link, .center-link a { font-size: 13px !important }
+.vpn-price strong { font-size: 17px !important }
+.footer h4, .footer p, .footer-grid a:not(.logo), .footer-bottom { font-size: 13px !important }
+.deal-menu-head { font-size: 13px !important }
+.deal-intro, .plan-info small, .plan-info em, .plan-price small, .deal-footnote { font-size: 13px !important }
+@media (max-width: 800px) {
+    .hero h1 { font-size: 46px !important }
+    .section-heading h2,
+    .editorial-copy h2,
+    .why-intro h2,
+    .faq h2,
+    .feature-intro h2,
+    .stories .section-heading h2,
+    .final-cta h2,
+    .guides .section-heading h2 { font-size: 32px !important }
+    .hero-lede { font-size: 16px !important }
+    .section-heading>p, .editorial-copy>p, .why-intro>p, .faq-grid>div>p, .feature-intro p, .guides .section-heading>p { font-size: 14px !important }
+    .voice-grid blockquote p { font-size: 14px !important }
+}
+
+/* Slightly larger hero status cards */
+.float-card { padding: 14px 17px; gap: 12px }
+.float-card b { font-size: 13px !important; line-height: 1.35 }
+.float-card small { font-size: 12px !important; line-height: 1.35 }
+.secure-icon { width: 30px; height: 30px }
+.mini-flag { width: 31px; height: 31px; font-size: 13px !important }
+.signal { font-size: 18px }

@@ -48,10 +48,7 @@ export default function FeatureBreakdown() {
               Every VPN has a different toolkit. Compare the details behind our
               scores before you choose.
             </p>
-            <small>
-              *Illustrative test data for this design concept. Specs and prices
-              should be verified before publishing.
-            </small>
+            
           </div>
         </div>
         <div className="feature-table-wrap">
