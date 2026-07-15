@@ -38,7 +38,7 @@ export default function FeatureBreakdown() {
           <div>
             <div className="eyebrow">Feature breakdown</div>
             <h2>
-              See what&apos;s included
+              See what &apos;s included
               <br />
               <span>at a glance.</span>
             </h2>

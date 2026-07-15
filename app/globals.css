@@ -1901,32 +1901,355 @@ td .star {
 }
 
 /* Plan selector opened from each View deal CTA */
-.deal-wrap { position: relative }
-.deal-trigger { border: 0; background: transparent; padding: 0; cursor: pointer }
-.deal-menu { position: absolute; z-index: 20; right: 0; top: 28px; width: 355px; background: #fff; border: 1px solid #dce4ef; border-radius: 10px; box-shadow: 0 18px 40px #182f5b24; padding: 10px; text-align: left }
-.deal-menu-head { display: flex; align-items: center; justify-content: space-between; padding: 4px 5px 10px; color: var(--ink); font-family: 'Plus Jakarta Sans'; font-size: 10px }
-.deal-menu-head button { border: 0; background: none; color: #8b97a8; font-size: 20px; line-height: 1; cursor: pointer }
-.plan-option { display: grid; grid-template-columns: 28px 1fr auto; gap: 9px; align-items: center; border: 1px solid #edf0f5; border-radius: 7px; padding: 10px; margin-top: 6px; transition: border-color .2s, background .2s }
-.plan-option:hover, .plan-option.recommended { border-color: #aac0ff; background: #f5f8ff }
-.plan-icon { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 7px; color: #fff; font-size: 14px; font-weight: 700 }
-.plan-icon.basic { background: #7d8ba0 }.plan-icon.pro { background: var(--blue) }.plan-icon.max { background: var(--navy) }
-.plan-info b { font-family: 'Plus Jakarta Sans'; font-size: 11px }.plan-info small, .plan-info em { display: block; color: var(--muted); font-size: 9px; font-style: normal; line-height: 1.4 }.plan-info em { color: #94a0b0 }
-.popular-label { margin-left: 6px; background: #e2ecff; color: var(--blue); border-radius: 3px; padding: 2px 4px; font-size: 8px; font-weight: 700 }
-.plan-price { display: flex; align-items: baseline; gap: 1px; white-space: nowrap }.plan-price strong { font-family: 'Plus Jakarta Sans'; font-size: 12px }.plan-price small { font-size: 8px; color: var(--muted) }
-.plan-choose { grid-column: 3; grid-row: 1; align-self: end; border: 1px solid #c8d7ff; color: var(--blue); background: #fff; border-radius: 4px; padding: 5px 8px; font-size: 9px; font-weight: 700; cursor: pointer }.plan-choose:hover { background: var(--blue); color: #fff }
-@media (max-width: 800px) { .deal-menu { position: fixed; left: 15px; right: 15px; top: 50%; transform: translateY(-50%); width: auto } }
-.deal-overlay { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 24px; background: #12213b70; backdrop-filter: blur(3px); animation: overlay-in .18s ease-out }
-.deal-overlay .deal-menu { position: relative; top: auto; right: auto; width: min(560px, 100%); padding: 20px; border-radius: 14px; box-shadow: 0 25px 70px #07152c45; animation: modal-in .2s ease-out }
-.deal-menu-head { padding: 0 0 12px; border-bottom: 1px solid #edf0f5 }
-.deal-menu-head>div { display: flex; flex-direction: column; gap: 3px }
-.deal-menu-head b { font-family: 'Plus Jakarta Sans'; font-size: 18px; letter-spacing: -.5px }
-.deal-kicker { color: var(--blue); text-transform: uppercase; letter-spacing: 1.3px; font-size: 9px; font-weight: 700 }
-.deal-intro { color: var(--muted); font-size: 12px; margin: 14px 0 16px }
-.deal-overlay .plan-option { grid-template-columns: 38px 1fr auto; padding: 14px; margin-top: 8px; border-radius: 9px }
-.deal-overlay .plan-icon { width: 38px; height: 38px; font-size: 17px }
-.deal-overlay .plan-info b { font-size: 13px }.deal-overlay .plan-info small { font-size: 10px; margin: 2px 0 }.deal-overlay .plan-info em { font-size: 10px }
-.deal-overlay .plan-price { grid-column: 3; grid-row: 1; align-self: start }.deal-overlay .plan-price strong { font-size: 16px }.deal-overlay .plan-price small { font-size: 10px }
-.deal-overlay .plan-choose { grid-column: 3; grid-row: 1; align-self: end; margin-top: 24px; display: inline-flex; align-items: center; gap: 4px; padding: 7px 10px }
-.deal-footnote { display: flex; align-items: center; gap: 6px; color: #8c98a9; border-top: 1px solid #edf0f5; margin-top: 15px; padding-top: 13px; font-size: 10px }.deal-footnote span { color: var(--green) }
-@keyframes overlay-in { from { opacity: 0 } to { opacity: 1 } } @keyframes modal-in { from { opacity: 0; transform: translateY(8px) scale(.98) } to { opacity: 1; transform: translateY(0) scale(1) } }
-@media (max-width: 600px) { .deal-overlay { padding: 15px }.deal-overlay .deal-menu { padding: 16px }.deal-overlay .plan-option { grid-template-columns: 34px 1fr; gap: 9px }.deal-overlay .plan-icon { width: 34px; height: 34px }.deal-overlay .plan-price { grid-column: 2; grid-row: 2; justify-self: start; margin-top: 5px }.deal-overlay .plan-choose { grid-column: 2; grid-row: 2; justify-self: end; margin-top: 0 } }
+.deal-wrap {
+    position: relative
+}
+
+.deal-trigger {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer
+}
+
+.deal-menu {
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    top: 28px;
+    width: 355px;
+    background: #fff;
+    border: 1px solid #dce4ef;
+    border-radius: 10px;
+    box-shadow: 0 18px 40px #182f5b24;
+    padding: 10px;
+    text-align: left
+}
+
+.deal-menu-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px 5px 10px;
+    color: var(--ink);
+    font-family: 'Plus Jakarta Sans';
+    font-size: 10px
+}
+
+.deal-menu-head button {
+    border: 0;
+    background: none;
+    color: #8b97a8;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer
+}
+
+.plan-option {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    gap: 9px;
+    align-items: center;
+    border: 1px solid #edf0f5;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 6px;
+    transition: border-color .2s, background .2s
+}
+
+.plan-option:hover,
+.plan-option.recommended {
+    border-color: #aac0ff;
+    background: #f5f8ff
+}
+
+.plan-icon {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700
+}
+
+.plan-icon.basic {
+    background: #7d8ba0
+}
+
+.plan-icon.pro {
+    background: var(--blue)
+}
+
+.plan-icon.max {
+    background: var(--navy)
+}
+
+.plan-info b {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 11px
+}
+
+.plan-info small,
+.plan-info em {
+    display: block;
+    color: var(--muted);
+    font-size: 9px;
+    font-style: normal;
+    line-height: 1.4
+}
+
+.plan-info em {
+    color: #94a0b0
+}
+
+.popular-label {
+    margin-left: 6px;
+    background: #e2ecff;
+    color: var(--blue);
+    border-radius: 3px;
+    padding: 2px 4px;
+    font-size: 8px;
+    font-weight: 700
+}
+
+.plan-price {
+    display: flex;
+    align-items: baseline;
+    gap: 1px;
+    white-space: nowrap
+}
+
+.plan-price strong {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 12px
+}
+
+.plan-price small {
+    font-size: 8px;
+    color: var(--muted)
+}
+
+.plan-choose {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end;
+    border: 1px solid #c8d7ff;
+    color: var(--blue);
+    background: #fff;
+    border-radius: 4px;
+    padding: 5px 8px;
+    font-size: 9px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.plan-choose:hover {
+    background: var(--blue);
+    color: #fff
+}
+
+@media (max-width: 800px) {
+    .deal-menu {
+        position: fixed;
+        left: 15px;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto
+    }
+}
+
+.deal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: #12213b70;
+    backdrop-filter: blur(3px);
+    animation: overlay-in .18s ease-out
+}
+
+.deal-overlay .deal-menu {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: min(560px, 100%);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 25px 70px #07152c45;
+    animation: modal-in .2s ease-out
+}
+
+.deal-menu-head {
+    padding: 0 0 12px;
+    border-bottom: 1px solid #edf0f5
+}
+
+.deal-menu-head>div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px
+}
+
+.deal-menu-head b {
+    font-family: 'Plus Jakarta Sans';
+    font-size: 18px;
+    letter-spacing: -.5px
+}
+
+.deal-kicker {
+    color: var(--blue);
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-size: 9px;
+    font-weight: 700
+}
+
+.deal-intro {
+    color: var(--muted);
+    font-size: 12px;
+    margin: 14px 0 16px
+}
+
+.deal-overlay .plan-option {
+    grid-template-columns: 38px 1fr auto;
+    padding: 14px;
+    margin-top: 8px;
+    border-radius: 9px
+}
+
+.deal-overlay .plan-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 17px
+}
+
+.deal-overlay .plan-info b {
+    font-size: 13px
+}
+
+.deal-overlay .plan-info small {
+    font-size: 10px;
+    margin: 2px 0
+}
+
+.deal-overlay .plan-info em {
+    font-size: 10px
+}
+
+.deal-overlay .plan-price {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start
+}
+
+.deal-overlay .plan-price strong {
+    font-size: 16px
+}
+
+.deal-overlay .plan-price small {
+    font-size: 10px
+}
+
+.deal-overlay .plan-choose {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: end;
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 7px 10px
+}
+
+.deal-footnote {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #8c98a9;
+    border-top: 1px solid #edf0f5;
+    margin-top: 15px;
+    padding-top: 13px;
+    font-size: 10px
+}
+
+.deal-footnote span {
+    color: var(--green)
+}
+
+@keyframes overlay-in {
+    from {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(.98)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1)
+    }
+}
+
+@media (max-width: 600px) {
+    .deal-overlay {
+        padding: 15px
+    }
+
+    .deal-overlay .deal-menu {
+        padding: 16px
+    }
+
+    .deal-overlay .plan-option {
+        grid-template-columns: 34px 1fr;
+        gap: 9px
+    }
+
+    .deal-overlay .plan-icon {
+        width: 34px;
+        height: 34px
+    }
+
+    .deal-overlay .plan-price {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: start;
+        margin-top: 5px
+    }
+
+    .deal-overlay .plan-choose {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: end;
+        margin-top: 0
+    }
+}
+
+/* More breathing room for large editorial headings */
+.hero h1, h2, .section-heading h2, .editorial-copy h2, .why-intro h2, .faq h2, .final-cta h2 {
+    letter-spacing: -1.25px;
+    word-spacing: 2px;
+    line-height: 1.16;
+    font-kerning: normal;
+}
+.editorial-copy h2, .why-intro h2, .faq h2, .section-heading h2 { max-width: 620px }
+.editorial-copy h2 { line-height: 1.18 }
+@media (max-width: 800px) {
+    .hero h1, h2, .section-heading h2, .editorial-copy h2, .why-intro h2, .faq h2, .final-cta h2 {
+        letter-spacing: -0.8px;
+        word-spacing: 1px;
+        line-height: 1.2;
+    }
+}
