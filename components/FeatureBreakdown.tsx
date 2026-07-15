@@ -31,6 +31,12 @@ export default function FeatureBreakdown() {
     ["▽", "ProtonVPN", "proton"],
     ["●", "purevpn", "pure"],
   ];
+  const renderValue = (value: string | boolean) =>
+    typeof value === "boolean" ? (
+      <span className={value ? "check-mark" : "cross-mark"}>{value ? "✓" : "×"}</span>
+    ) : (
+      value
+    );
   return (
     <section className="feature-breakdown" id="features">
       <div className="container">
@@ -68,17 +74,7 @@ export default function FeatureBreakdown() {
               {rows.map((row) => (
                 <tr key={row[0] as string}>
                   <td>{row[0] as string}</td>
-                  {row.slice(1).map((value, index) => (
-                    <td key={`${row[0]}-${index}`}>
-                      {typeof value === "boolean" ? (
-                        <span className={value ? "check-mark" : "cross-mark"}>
-                          {value ? "✓" : "×"}
-                        </span>
-                      ) : (
-                        value
-                      )}
-                    </td>
-                  ))}
+                  {row.slice(1).map((value, index) => <td key={`${row[0]}-${index}`}>{renderValue(value)}</td>)}
                 </tr>
               ))}
             </tbody>
