@@ -152,7 +152,7 @@ function Logo() {
         <Lock />
       </span>
       <span>
-        vpn<span className="logo-dot">ly</span>
+        VPN<span className="logo-dot">LY</span>
       </span>
     </a>
   );
@@ -198,9 +198,28 @@ function Header() {
 }
 
 const planOptions = [
-  { name: "Basic", price: "$3.39", devices: "6 devices", feature: "Private browsing + ad blocker", tone: "basic" },
-  { name: "Pro", price: "$4.99", devices: "10 devices", feature: "Streaming + threat protection", tone: "pro", popular: true },
-  { name: "Pro Max", price: "$7.49", devices: "Unlimited devices", feature: "Dedicated IP + identity alerts", tone: "max" },
+  {
+    name: "Basic",
+    price: "$3.39",
+    devices: "6 devices",
+    feature: "Private browsing + ad blocker",
+    tone: "basic",
+  },
+  {
+    name: "Pro",
+    price: "$4.99",
+    devices: "10 devices",
+    feature: "Streaming + threat protection",
+    tone: "pro",
+    popular: true,
+  },
+  {
+    name: "Pro Max",
+    price: "$7.49",
+    devices: "Unlimited devices",
+    feature: "Dedicated IP + identity alerts",
+    tone: "max",
+  },
 ];
 
 function DealMenu({ vpnName }: { vpnName: string }) {
@@ -220,20 +239,78 @@ function DealMenu({ vpnName }: { vpnName: string }) {
   }, [open]);
   return (
     <div className="deal-wrap">
-      <button className="small-link deal-trigger" type="button" onClick={() => setOpen(!open)} aria-expanded={open}>
+      <button
+        className="small-link deal-trigger"
+        type="button"
+        onClick={() => setOpen(!open)}
+        aria-expanded={open}
+      >
         View deal <Arrow size={14} />
       </button>
-      {open && createPortal(<div className="deal-overlay" onClick={() => setOpen(false)}><div className="deal-menu" role="dialog" aria-modal="true" aria-label={`${vpnName} plans`} onClick={(event) => event.stopPropagation()}>
-        <div className="deal-menu-head"><div><span className="deal-kicker">Flexible plans</span><b>Choose your {vpnName} plan</b></div><button type="button" onClick={() => setOpen(false)} aria-label="Close plans">×</button></div>
-        <p className="deal-intro">Select the level of protection that fits the way you browse.</p>
-        {planOptions.map((plan) => <div className={`plan-option ${plan.popular ? "recommended" : ""}`} key={plan.name}>
-          <div className={`plan-icon ${plan.tone}`}>{plan.name === "Pro Max" ? "✦" : plan.name === "Pro" ? "◆" : "•"}</div>
-          <div className="plan-info"><div><b>{plan.name}</b>{plan.popular && <span className="popular-label">Most popular</span>}</div><small>{plan.feature}</small><em>{plan.devices} · 30-day guarantee</em></div>
-          <div className="plan-price"><strong>{plan.price}</strong><small>/mo</small></div>
-          <button className="plan-choose" type="button">Choose plan <Arrow size={12} /></button>
-        </div>)}
-        <div className="deal-footnote"><span>↗</span> Cancel anytime · Prices shown are illustrative</div>
-      </div></div>, document.body)}
+      {open &&
+        createPortal(
+          <div className="deal-overlay" onClick={() => setOpen(false)}>
+            <div
+              className="deal-menu"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`${vpnName} plans`}
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="deal-menu-head">
+                <div>
+                  <span className="deal-kicker">Flexible plans</span>
+                  <b>Choose your {vpnName} plan</b>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setOpen(false)}
+                  aria-label="Close plans"
+                >
+                  ×
+                </button>
+              </div>
+              <p className="deal-intro">
+                Select the level of protection that fits the way you browse.
+              </p>
+              {planOptions.map((plan) => (
+                <div
+                  className={`plan-option ${plan.popular ? "recommended" : ""}`}
+                  key={plan.name}
+                >
+                  <div className={`plan-icon ${plan.tone}`}>
+                    {plan.name === "Pro Max"
+                      ? "✦"
+                      : plan.name === "Pro"
+                        ? "◆"
+                        : "•"}
+                  </div>
+                  <div className="plan-info">
+                    <div>
+                      <b>{plan.name}</b>
+                      {plan.popular && (
+                        <span className="popular-label">Most popular</span>
+                      )}
+                    </div>
+                    <small>{plan.feature}</small>
+                    <em>{plan.devices} · 30-day guarantee</em>
+                  </div>
+                  <div className="plan-price">
+                    <strong>{plan.price}</strong>
+                    <small>/mo</small>
+                  </div>
+                  <button className="plan-choose" type="button">
+                    Choose plan <Arrow size={12} />
+                  </button>
+                </div>
+              ))}
+              <div className="deal-footnote">
+                <span>↗</span> Cancel anytime · Prices shown are illustrative
+              </div>
+            </div>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }

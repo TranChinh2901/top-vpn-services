@@ -2061,6 +2061,17 @@ td .star {
     }
 }
 
+/* Keep stat units attached to their values: 812k and 4.9/5 */
+.stats-grid strong span {
+    display: inline;
+    white-space: nowrap;
+    margin-left: 1px;
+    line-height: inherit;
+}
+.stats-grid>div {
+    min-width: 0;
+}
+
 .deal-overlay {
     position: fixed;
     inset: 0;
