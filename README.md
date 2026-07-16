@@ -8,7 +8,6 @@
 
 ## UI Research
 
-Em tham khảo các website VPN và cybersecurity phổ biến để nghiên cứu trust, visual hierarchy, CTA và comparison. Mục đích là học hỏi pattern tốt, không sao chép một giao diện cụ thể.
 
 ### 1. NordVPN
 
