@@ -1,27 +1,14 @@
-# VPNly — Top VPN Services 2026
 
-VPNly là homepage theo phong cách editorial dành cho việc so sánh các dịch vụ VPN tốt nhất năm 2026. Website được thiết kế cho người dùng quốc tế, giúp người dùng hiểu rõ các lựa chọn, so sánh tính năng và chọn gói VPN phù hợp.
-
-
-## Liên kết
+## Link demo / source code
 
 - **Live demo:** https://top-vpn-services.netlify.app/
 - **Source code:** https://github.com/TranChinh2901
 
-## Mục tiêu sản phẩm
 
-Các dịch vụ VPN thường khó so sánh vì mỗi nhà cung cấp sử dụng cách gọi tính năng, cách tính giá và thông điệp marketing khác nhau. VPNly giải quyết vấn đề này bằng một hành trình rõ ràng:
-
-1. Tạo niềm tin thông qua methodology và các tín hiệu kiểm thử.
-2. Giúp người dùng nhanh chóng xem các VPN được đánh giá cao.
-3. Cho phép so sánh các tính năng quan trọng side-by-side.
-4. Hướng người dùng đến gói VPN phù hợp thông qua CTA rõ ràng.
-
-Homepage được xây dựng giống một sản phẩm review thực tế, không chỉ là một landing page quảng cáo.
 
 ## UI Research
 
-Mình tham khảo các website VPN và cybersecurity phổ biến để nghiên cứu cách họ xây dựng trust, hierarchy, CTA và trải nghiệm so sánh. Mục đích là học hỏi pattern tốt, không sao chép một giao diện cụ thể.
+Em tham khảo các website VPN và cybersecurity phổ biến để nghiên cứu trust, visual hierarchy, CTA và comparison. Mục đích là học hỏi pattern tốt, không sao chép một giao diện cụ thể.
 
 ### 1. NordVPN
 
@@ -29,14 +16,15 @@ Tham khảo: [nordvpn.com](https://nordvpn.com/)
 
 **Điểm mạnh**
 
-- Sử dụng ngôn ngữ hình ảnh tập trung vào security và privacy.
-- Truyền tải value proposition rõ ràng.
-- Đặt lợi ích sản phẩm và trust signals gần các điểm chuyển đổi.
-- Có nhiều tính năng nhưng vẫn phân chia nội dung dễ hiểu.
+- Thiết kế chuyên nghiệp, tạo cảm giác an toàn và công nghệ. Trang định vị sản phẩm như một hệ sinh thái bảo mật gồm VPN, antivirus và Dark Web Monitor, thay vì chỉ là dịch vụ đổi IP.
+- Màu sắc: Dùng nền xanh navy/xanh đậm làm màu chính, kết hợp trắng và xanh sáng để tạo tương phản. Màu tối truyền tải sự bảo mật, còn màu đỏ hướng mắt vào các nút hành động.
+- Kiểu chữ (Typography) & hierarchy: Tiêu đề lớn, đậm, dễ quét. Nội dung được chia theo các nhóm “Connect –Protect – Monitor”, giúp người dùng hiểu lợi ích theo từng nhu cầu.
+- Layout & spacing: Bố cục dạng landing page dài: hero → tính năng → lợi ích → số liệu → đánh giá → thiết bị → FAQ. Các hình ảnh giao diện app xen kẽ nội dung giúp trang bớt nhàm chán.
+- CTA & điều hướng: “Get NordVPN” xuất hiện nhiều lần, đặc biệt ở hero và sau các section quan trọng. “30-day money-back guarantee” giúp giảm tâm lý e ngại khi mua.
 
-**Điểm áp dụng vào VPNly**
+**Điểm áp dụng vào VPNLY**
 
-VPNly sử dụng navy và blue làm nền tảng thị giác để tạo cảm giác tin cậy, bảo mật và công nghệ. Các thông tin kỹ thuật được gom vào những section riêng để người dùng không bị quá tải ngay từ đầu.
+VPNLY sử dụng navy và blue để tạo cảm giác tin cậy, bảo mật và công nghệ. Thông tin kỹ thuật được gom vào section riêng để người dùng không bị quá tải ngay từ hero.
 
 ### 2. ExpressVPN
 
@@ -44,35 +32,22 @@ Tham khảo: [expressvpn.com](https://www.expressvpn.com/)
 
 **Điểm mạnh**
 
-- Visual hierarchy rõ ràng.
-- CTA chính dễ nhận biết.
-- Sử dụng ngôn ngữ đơn giản, phù hợp với người mới.
-- Cân bằng giữa hình ảnh premium và thông tin thực tế.
+- Mang cảm giác cao cấp, tập trung mạnh vào tốc độ, quyền riêng tư và độ tin cậy. 
+- Màu sắc: Sử dụng nền sáng kết hợp các vùng màu tím/xanh đậm/đỏ và màu accent nổi bật cho CTA. Tổng thể tạo cảm giác hiện đại, premium và khác biệt so với giao diện cybersecurity thường dùng nền tối.
+- Kiểu chữ (Typography) & hierarchy: Headline rất lớn và trực tiếp, ví dụ “World’s #1 VPN”. Thông tin được phâncấp theo thứ tự: ưu đãi → bằng chứng → tính năng → lợi ích → giải thích VPN.
+- Layout & spacing: Bố cục thoáng, nhiều khoảng trắng và các section card rõ ràng. Phần “Why ExpressVPN?” trình bày các ưu điểm như 113 quốc gia, không lưu hoạt động, hỗ trợ nhiều thiết bị dưới dạng các điểm ngắn dễ đọc.
+- CTA & điều hướng: CTA “Get the Deal Now” được đặt ngay hero và gắn với giá ưu đãi, dễ dang tiếp cận tiếp là phần “Get ExpressVPN” được lặp lại nhiều lần ở những vị trí quan trọng dễ thao tác. Navigation rất đầy đủ, bao gồm tính năng, tải ứng dụng, tài nguyên, hỗ trợ và sản phẩm khác.
 
-**Điểm áp dụng vào VPNly**
+**Điểm áp dụng vào VPNLY**
 
-Hero của VPNly sử dụng một thông điệp ngắn, một CTA chính và các trust signals ngay bên dưới. Ranking cards cũng chỉ hiển thị các thông tin quan trọng để người dùng dễ scan.
+Khu vực giới thiệu chính (Hero) có một thông điệp ngắn, một CTA chính và trust signals ngay bên dưới. Ranking cards chỉ hiển thị các thông tin quan trọng để người dùng dễ scan.
 
-### 3. Surfshark
-
-Tham khảo: [surfshark.com](https://surfshark.com/)
-
-**Điểm mạnh**
-
-- Truyền tải value proposition tốt.
-- Nội dung hướng vào lợi ích người dùng.
-- Navigation và product categories dễ hiểu.
-- Sử dụng card layout hiệu quả cho việc discovery và comparison.
-
-**Điểm áp dụng vào VPNly**
-
-VPNly sử dụng card cho ranking, buying guides và editorial content. Người dùng có thể bắt đầu từ nhu cầu như streaming, privacy hoặc travel trước khi chọn một sản phẩm cụ thể.
 
 ## Design System
 
 ### Màu sắc
 
-| Token | Giá trị | Mục đích |
+| màu sắc | Mã màu | Dùng cho |
 | --- | --- | --- |
 | Ink navy | `#12213B` | Text chính, navigation và nền tối |
 | Brand blue | `#2F6BFF` | CTA chính, link và active state |
@@ -81,46 +56,43 @@ VPNly sử dụng card cho ranking, buying guides và editorial content. Ngườ
 | Success green | `#17A673` | Security state, check và positive signal |
 | Border | `#E4E9F0` | Border card và table |
 
-Bảng màu được giữ ở mức tiết chế. Navy và blue tạo cảm giác tin cậy, green chỉ dùng cho trạng thái tích cực hoặc bảo mật. Website không lạm dụng gradient.
 
-### Typography
+### Khoảng cách và thành phần giao diện
 
-- **Heading:** Plus Jakarta Sans.
-- **Body:** DM Sans.
-- Heading có tính editorial nhưng vẫn ưu tiên khả năng đọc.
-- Body text được giữ rõ ràng, phù hợp với việc scan thông tin.
-- Các text phụ được giới hạn tối thiểu khoảng 13px.
+- **Heading:** Font chữ Plus Jakarta Sans - hiện đại, chắc chắn, gọn gàng.
+- **Body:** Font chữ DM Sans.
+- Tiêu đề có hierarchy rõ ràng và letter spacing được kiểm soát.
+- Text phụ được giữ ở kích thước dễ đọc, tránh sử dụng chữ quá nhỏ.
 
-### Spacing và hình dạng
+### Khoảng cách và thành phần giao diện
 
-- Sử dụng spacing theo nhịp 8px.
-- Card dùng border mảnh và border-radius khoảng 9–12px.
+- Card dùng border mảnh (mỏng nhẹ) và border-radius khoảng 9–12px.
 - Shadow chỉ dùng cho popup và floating UI.
 - Button có độ tương phản rõ và trạng thái hover.
 
-## Các section trong homepage
+## Mô tả trang chủ 
 
-- **Header:** Điều hướng đến Best VPNs, How we rank, VPN guides và FAQ.
+- **Header:** Điều hướng đến Best VPNs, How we rank, VPN guides, FAQ và CTA Compare VPNs.
 - **Hero:** Truyền tải thông điệp chính, CTA, update date và trust signal.
 - **Trust stats:** Hiển thị các tín hiệu về số lượng VPN và speed tests.
-- **VPN rankings:** Hiển thị top VPN, điểm số, giá, tính năng và CTA.
+- **VPN rankings:** Thứ hạng, giá, danh sách tính năng, khi click vào “View deal” thì sẽ show những option (Basic, Pro và Pro Max).
 - **View deal modal:** Cho phép chọn Basic, Pro hoặc Pro Max.
 - **Feature breakdown:** So sánh chi tiết các tính năng security và performance.
-- **Methodology:** Giải thích cách VPNly đánh giá sản phẩm.
+- **Methodology:** Giải thích cách VPNLY đánh giá sản phẩm.
 - **Buying guides:** Hướng người dùng theo nhu cầu streaming, privacy và travel.
-- **Editorial guides:** Bổ sung nội dung giáo dục và tạo thêm điểm truy cập.
+- **Editorial guides:** Các bài viết về kiến thức VPN, xem nội dung trực tuyến và du lịch.
 - **Reader voices:** Bổ sung social proof.
 - **FAQ:** Trả lời các câu hỏi cơ bản về VPN.
 - **Final CTA:** Tạo điểm chuyển đổi cuối trang.
 
-## Quyết định UX và conversion
+## Quyết định Trải nghiệm người dùng và chuyển đổi (UX & Conversion)
 
-- Hero chỉ có một CTA chính: `See the top VPNs`.
-- Ranking xuất hiện sớm để người dùng có thể hành động nhanh.
-- Methodology được đặt gần comparison để tăng độ tin cậy.
-- Comparison table dành cho người dùng cần kiểm tra kỹ trước khi click deal.
-- CTA được dùng nhất quán về màu sắc và cách đặt tên.
-- Final CTA xuất hiện sau khi người dùng đã đọc đủ thông tin.
+- Khu vực giới thiệu chính (Hero) chỉ có một CTA chính: See the top VPNs, tránh phân tán chú ý.
+- Ranking xuất hiện sớm để người dùng xem sản phẩm ngay.
+- Phương pháp đánh giá đặt gần comparison để tăng độ tin cậy.
+- View deal mở plan selector Basic, Pro và Pro Max giá cả khác nhau.
+- Show more VPNs giữ màn hình ban đầu gọn nhưng vẫn cho phép khám phá thêm.
+- CTA cuối trang xuất hiện sau khi người dùng đã đọc đủ thông tin.
 
 ## Responsive strategy
 
@@ -149,12 +121,16 @@ components/
 └── ui.tsx
 ```
 
-`page.tsx` chỉ còn nhiệm vụ composition các section. `Header`, `HeroSection`, `RankingSection` và `ContentSections` chịu trách nhiệm từng nhóm UI riêng. `VpnCard` và `DealMenu` được quản lý trong `RankingSection`; `FeatureBreakdown` được tách riêng vì có data structure và UI logic phức tạp hơn. Dữ liệu VPN và các gói plan được tách khỏi UI trong `site-data.ts`, còn icon và Logo dùng chung nằm trong `ui.tsx`.
+- page.tsx chỉ còn nhiệm vụ composition các section.
+- Header.tsx thanh đầu trang.
+- HeroSection.tsx, RankingSection.tsx và ContentSections.tsx chịu trách nhiệm từng nhóm UI riêng. 
+- FeatureBreakdown.tsx được tách riêng vì có data structure và UI logic phức tạp hơn.
+- site-data.ts chứa dữ liệu VPN và các gói plan được tách khỏi UI. 
 
 ## Technical decisions
 
-- Sử dụng Next.js App Router, React và TypeScript.
-- Sử dụng CSS-first để giao diện nhẹ và dễ review.
+- Sử dụng Next.js  và TypeScript.
+- Sử dụng CSS để style.
 - Dữ liệu VPN được tách thành typed arrays để có thể thay thế bằng API hoặc CMS.
 - Deal modal sử dụng React state và portal để tránh lỗi stacking context, overflow.
 - Development và production dùng thư mục build riêng để tránh lỗi stale webpack chunk.
@@ -178,29 +154,6 @@ components/
 ## Nếu có thêm thời gian
 
 - Kết nối dữ liệu provider đã được kiểm chứng.
-- Tạo trang review riêng cho từng VPN.
-- Thêm filter theo privacy, streaming, gaming, travel và price.
-- Thêm affiliate tracking.
-- Chạy automated performance và accessibility tests.
-- Thực hiện usability testing với người mới dùng VPN.
-- Hoàn thiện focus management cho modal.
+- Tạo trang chủ đầy đủ hơn có nhiều chi tiết hơn.  Ví dụ: Sẽ tạo những trang chi tiết cho VPN, blogs,...
+- Thêm backend + database
 
-## Chạy project local
-
-```bash
-npm install
-npm run dev
-```
-
-Mở [http://localhost:3000](http://localhost:3000).
-
-## Production build
-
-```bash
-npm run build
-npm start
-```
-
-## Lưu ý khi nộp bài
-
-Project tập trung vào chất lượng UI, research-informed design, conversion thinking và frontend implementation. Dữ liệu thương mại thật và affiliate integration nằm ngoài phạm vi của bài test.
